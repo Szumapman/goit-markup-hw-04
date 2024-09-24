@@ -11,12 +11,14 @@
   --grey: #2e2f42;
   --white: #ffffff;
   --dairy: #fcfcfc;
+  --bg-top-banner-gradient: linear-gradient(
+    rgba(46, 47, 66, 0.7),
+    rgba(46, 47, 66, 0.7)
+  );
 }
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
+:focus {
+  outline: none;
 }
 
 body {
@@ -27,12 +29,14 @@ body {
   font-weight: 500;
   letter-spacing: 0.02em;
   background-color: var(--white);
-  margin: 0px;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 ul {
   margin: 0px;
   padding: 0px;
+  list-style-type: none;
 }
 
 a {
@@ -78,10 +82,6 @@ p {
   padding: 120px 0;
 }
 
-.list-style-type-none {
-  list-style-type: none;
-}
-
 .header {
   display: flex;
   justify-content: space-between;
@@ -122,14 +122,31 @@ p {
   gap: 40px;
 }
 
+.nav-item:focus,
 .nav-item:hover {
   color: var(--ocean);
 }
 
-.nav-item:focus {
-  color: var(--ocean);
-  text-decoration: underline;
+.underlined {
+  padding: 24px 0;
+  position: relative;
 }
+
+.underlined::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -5%;
+  width: 0%;
+  height: 4px;
+  background-color: var(--ocean);
+  border-radius: 2px;
+}
+
+.underlined:focus::after {
+  width: 100%;
+  transition: width 250ms ease-in-out ;
+} 
 
 .address {
   font-style: normal;
@@ -139,6 +156,11 @@ p {
 .top-baner-section {
   padding: 188px 0;
   background-color: var(--navy-blue);
+  background-image: var(--bg-top-banner-gradient),
+    url(../images/people_office.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .top-baner-container {
@@ -180,21 +202,38 @@ p {
   display: none;
 }
 
-.about-us-list {
+.our-strengths-list {
   display: flex;
   justify-content: space-evenly;
   gap: 24px;
 }
 
-.about-us-item {
+.our-strengths-item {
   width: calc((100% - 72px) / 4);
 }
 
-.about-us-item h3 {
+.our-strengths-item-icon-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px 0;
+  background-color: var(--cloud);
+  border: 1px solid var(--light-slate);
+  border-radius: 4px;
   margin-bottom: 8px;
 }
 
-.about-us-item p {
+.our-strengths-item-icon-svg {
+  width: 64px;
+  height: 64px;
+  fill: var(--navy-blue);
+}
+
+.our-strengths-item h3 {
+  margin-bottom: 8px;
+}
+
+.our-strengths-item p {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
