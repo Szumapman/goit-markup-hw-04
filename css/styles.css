@@ -17,10 +17,6 @@
   );
 }
 
-:focus {
-  outline: none;
-}
-
 body {
   font-family: "Roboto", sans-serif;
   color: var(--slate);
@@ -125,6 +121,7 @@ p {
 .nav-item:focus,
 .nav-item:hover {
   color: var(--ocean);
+  outline: none;
 }
 
 .underlined {
@@ -313,6 +310,10 @@ p {
   height: 40px;
   border-radius: 50%;
   background-color: var(--iris);
+}
+
+.team-card-social-link:hover {
+  background-color: var(--ocean);
 }
 
 .team-card-social-icon {
