@@ -263,7 +263,7 @@ p {
   gap: 24px;
 }
 
-.team-card li {
+.team-card .list {
   width: calc((100% - 72px - 312px) / 4);
   min-width: 264px;
   background-color: var(--white);
@@ -292,6 +292,33 @@ p {
   font-size: 16px;
   line-height: 1.5;
   color: var(--slate);
+  margin-bottom: 8px;
+}
+
+.team-card .social-list {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+.team-card-social-item {
+  width: 40px;
+}
+
+.team-card-social-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--iris);
+}
+
+.team-card-social-icon {
+  width: 16px;
+  height: 16px;
+  fill: var(--cloud);
 }
 
 .portfolio-list {
