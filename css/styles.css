@@ -28,7 +28,6 @@ body {
   font-weight: 500;
   letter-spacing: 0.02em;
   background-color: var(--white);
-  max-width: 1440px;
   margin: 0 auto;
 }
 
@@ -155,6 +154,8 @@ p {
 
 .top-baner-section {
   padding: 188px 0;
+  max-width: 1440px;
+  margin: 0 auto;
   background-color: var(--navy-blue);
   background-image: var(--bg-top-banner-gradient),
     url(../images/people_office.jpg);
