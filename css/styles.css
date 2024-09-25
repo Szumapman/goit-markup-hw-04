@@ -123,7 +123,6 @@ p {
 .nav-item:focus,
 .nav-item:hover {
   color: var(--ocean);
-  outline: none;
 }
 
 .underlined {
@@ -136,16 +135,11 @@ p {
   display: block;
   position: absolute;
   bottom: -5%;
-  width: 0%;
+  width: 100%;
   height: 4px;
   background-color: var(--ocean);
   border-radius: 2px;
 }
-
-.underlined:focus::after {
-  width: 100%;
-  transition: width 250ms ease-in-out ;
-} 
 
 .address {
   font-style: normal;
